@@ -11,6 +11,7 @@ fi
 if [ -f conda-requirements.txt ]; then
     puts-step "Installing dependencies using Conda"
     conda install --file conda-requirements.txt --yes | indent
+    conda install -c https://conda.binstar.org/dougal pyflann --yes | indent
 fi
 
 if [ -f requirements.txt ]; then
